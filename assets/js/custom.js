@@ -77,10 +77,10 @@
           var target = $(this.hash);
           $('html, body').stop().animate({
               scrollTop: (target.offset().top) + 1
-          }, 500, 'swing', function () {
-              window.location.hash = target;
+            }, 500, 'swing', function () {
+              window.location.hash = menu;
               $(document).on("scroll", onScroll);
-          });
+            });
       });
   });
 
@@ -122,6 +122,33 @@
   }
 
 
+  document.getElementById("contact").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const payload = {
+    name: document.getElementById("name").value.trim(),
+    business_name: document.getElementById("business").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    subject: document.getElementById("subject").value.trim(),
+    service_required: document.getElementById("service").value,
+    message: document.getElementById("message").value.trim()
+  };
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) throw new Error();
+
+    alert("Thanks! We’ll contact you soon.");
+    e.target.reset();
+  } catch {
+    alert("Something went wrong. Please try again.");
+  }
+});
 
 
 })(window.jQuery);
