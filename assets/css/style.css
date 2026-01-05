@@ -1496,7 +1496,7 @@ contact
 
 .contact-us .contact-info {
   padding: 40px 30px;
-  border: 2px solid #eee;
+  border: 1px solid gray;
 }
 
 .contact-us .contact-info ul li {
@@ -1507,7 +1507,7 @@ contact
 
 .contact-us .contact-info ul li a {
   font-size: 15px;
-  color: #afafaf;
+  color: black;
   transition: all .5s;
 }
 
@@ -1529,24 +1529,31 @@ contact
 
 form#contact {
   position: relative;
-  background-color: #fff;
-  padding: 60px 80px;
-  border-radius: 50px;
+  /* make form background almost solid to avoid background blur showing through */
+  background-color: rgba(255,255,255,0.96);
+  padding: 50px 60px;
+  border-radius: 16px;
   text-align: center;
+  /* subtle shadow for depth */
+  box-shadow: 0 8px 30px rgba(34,47,62,0.08);
+  border: 1px solid rgba(34,47,62,0.06);
 }
 
-form#contact input {
+form#contact input,
+form#contact select {
   width: 100%;
   height: 46px;
-  border-radius: 5px;
-  background-color: transparent;
-  border: 2px solid #efefef;
+  border-radius: 8px;
+  background-color: #ffffff;
+  /* slightly darker border for better contrast */
+  border: 1px solid gray;
   outline: none;
   font-size: 15px;
-  font-weight: 300;
-  color: #2a2a2a;
-  padding: 0px 20px;
-  margin-bottom: 20px;
+  font-weight: 400;
+  color: #222;
+  padding: 0px 18px;
+  margin-bottom: 18px;
+  transition: all .18s ease;
 }
 
 form#contact input::placeholder {
@@ -1561,8 +1568,8 @@ form#contact textarea {
   min-height: 140px;
   height: 140px;
   border-radius: 5px;
-  background-color: transparent;
-  border: 2px solid #efefef;
+  background-color: #ffffff;
+  border: 1px solid gray;
   outline: none;
   font-size: 15px;
   font-weight: 300;
@@ -1572,30 +1579,87 @@ form#contact textarea {
 }
 
 form#contact textarea::placeholder {
-  color: #aaa;
+  color: #9aa6b2;
+}
+
+form#contact input::placeholder,
+form#contact select::placeholder {
+  color: #9aa6b2;
+}
+
+/* focus states */
+form#contact input:focus,
+form#contact textarea:focus,
+form#contact select:focus {
+  border-color: #33ccc5;
+  box-shadow: 0 6px 18px rgba(51,204,197,0.12);
+}
+
+/* show placeholder color in select until user chooses a valid value */
+form#contact select {
+  color: #222; /* default selected text color */
+}
+form#contact select:invalid {
+  color: #9aa6b2; /* placeholder look when no value */
 }
 
 form#contact button {
   display: inline-block;
-  background-color: #33ccc5;
+  /* lively gradient button */
+  background: linear-gradient(90deg,#33ccc5 0%, #4771cb 100%);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   margin-top: 20px;
-  text-transform: capitalize;
-  padding: 12px 25px;
-  border-radius: 23px;
+  text-transform: none;
+  padding: 12px 28px;
+  border-radius: 10px;
   letter-spacing: 0.25px;
-  border-bottom: 2px solid #4771cb!important;
-  transition: all .3s;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
   outline: none;
   border: none;
+  box-shadow: 0 6px 18px rgba(71,113,203,0.12);
 }
 
 form#contact button:hover {
-  background-color: #4771cb!important;
-  color: #fff!important;
-  border-bottom: 2px solid #33ccc5!important;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(71,113,203,0.18);
+  opacity: 0.98;
+}
+
+/* Contact form inline status messages */
+.contact-message {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(34,47,62,0.04);
+  border: 1px solid transparent;
+}
+.contact-message.success {
+  background-color: #e6fbf6;
+  color: #0b6b47;
+  border-color: rgba(51,204,197,0.25);
+}
+.contact-message.error {
+  background-color: #fff2f2;
+  color: #8a1f1f;
+  border-color: rgba(204,77,77,0.18);
+}
+.contact-message[hidden] {
+  display: none;
+}
+
+/* make select visually consistent */
+form#contact select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 38px;
 }
 
 /* 

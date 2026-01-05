@@ -78,7 +78,10 @@
           $('html, body').stop().animate({
               scrollTop: (target.offset().top) + 1
             }, 500, 'swing', function () {
-              window.location.hash = menu;
+              // Do not add the fragment to the URL. If a fragment exists, remove it.
+              if (history && history.replaceState) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+              }
               $(document).on("scroll", onScroll);
             });
       });
@@ -124,6 +127,7 @@
 
   document.getElementById("contact").addEventListener("submit", async (e) => {
   e.preventDefault();
+  const form = e.target;
   const payload = {
     name: document.getElementById("name").value.trim(),
     business_name: document.getElementById("business").value.trim(),
@@ -143,12 +147,26 @@
 
     if (!res.ok) throw new Error();
 
-    alert("Thanks! We’ll contact you soon.");
-    e.target.reset();
-  } catch {
-    alert("Something went wrong. Please try again.");
+    showContactMessage("Thanks! We’ll contact you soon.", "success");
+  } catch (err) {
+    showContactMessage("Something went wrong. Please try again.", "error");
+  } finally {
+    // Clear the form whether the submission succeeded or failed
+    try { form.reset(); } catch (e) {}
   }
 });
+
+// helper to display inline success/error messages
+function showContactMessage(text, type) {
+  const el = document.getElementById('contact-message');
+  if (!el) return;
+  el.classList.remove('success', 'error');
+  el.classList.add(type === 'success' ? 'success' : 'error');
+  el.textContent = text;
+  el.hidden = false;
+  if (showContactMessage._timeout) clearTimeout(showContactMessage._timeout);
+  showContactMessage._timeout = setTimeout(() => { el.hidden = true; }, 6000);
+}
 
 
 })(window.jQuery);
