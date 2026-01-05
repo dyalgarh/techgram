@@ -59,9 +59,7 @@ export default async function handler(req, res) {
               <li><strong>Service Required:</strong> ${service_required}</li>
               <li><strong>Message:</strong> ${message}</li>
             </ul>
-            <p>Meanwhile, you can explore our website for more information:</p>
-            <p><a href="https://techgram.com" style="display:inline-block; padding:10px 20px; background:#0d6efd; color:#fff; text-decoration:none; border-radius:5px;">Visit Techgram</a></p>
-            <p>Thanks,<br>The Techgram Team</p>
+            <p>Thanks,<br>Techgram Team</p>
           </div>
           <div style="text-align:center; font-size:14px; color:#777; margin-top:20px;">&copy; 2026 Techgram. All rights reserved.</div>
         </div>
