@@ -44,15 +44,30 @@ export default async function handler(req, res) {
       to: email,
       subject: "Thank you for contacting Techgram",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width:600px; margin:0 auto; padding:20px; background:#f9f9f9; border-radius:8px;">
-          <div style="text-align:center; background:#0d6efd; color:#fff; padding:20px; border-radius:8px 8px 0 0; font-size:24px;">Techgram</div>
-          <div style="padding:20px; font-size:16px; line-height:1.5; color:#333;">
-            <p>Hi ${name},</p>
-            <p>Thank you for reaching out to us! We have received your message and our team will get back to you as soon as possible.</p></br>
-            <p>Thanks,<br>Techgram Team</p>
-          </div>
-          <div style="text-align:center; font-size:14px; color:#777; margin-top:20px;">&copy; 2026 Techgram. All rights reserved.</div>
-        </div>
+        <div style="font-family: Inter, Arial, sans-serif; max-width:600px; margin:0 auto; padding:24px; background:#ffffff; border:1px solid #e5e5e5; border-radius:12px;">
+  
+		  <div style="text-align:center; color:#000000; padding:16px 0; font-size:26px; font-weight:800; letter-spacing:-0.5px;">
+			Techgram
+		  </div>
+
+		  <div style="padding:20px; font-size:16px; line-height:1.6; color:#111111;">
+			<p style="margin:0 0 16px 0;">Hi ${name},</p>
+
+			<p style="margin:0 0 16px 0;">
+			  Thank you for reaching out to Techgram. We’ve received your message and will review it shortly.
+			</p>
+
+			<p style="margin:0;">
+			  Thanks,<br>
+			  <strong>Techgram Team</strong>
+			</p>
+		  </div>
+
+		  <div style="text-align:center; font-size:13px; color:#777777; margin-top:24px; border-top:1px solid #e5e5e5; padding-top:16px;">
+			© 2026 Techgram. All rights reserved.
+		  </div>
+
+		</div>
       `
     });
 
