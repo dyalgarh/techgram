@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const formMessage = document.getElementById('form-message');
 	
-	  document.getElementById("contact").addEventListener("submit", async (e) => {
+	  document.getElementById("contact-form").addEventListener("submit", async (e) => {
 	  e.preventDefault();
 	  
 	  const form = e.target;
