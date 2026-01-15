@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const formMessage = document.getElementById('form-message');
 	
 	  document.getElementById("contact").addEventListener("submit", async (e) => {
 	  e.preventDefault();
-	  const formMessage = document.getElementById('form-message');
 	  
 	  const form = e.target;
 	  const submitBtn = form.querySelector('button[type="submit"]');
@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		showContactMessage("Something went wrong. Please try again.", false);
 	  } finally {
 		// Clear the form whether the submission succeeded or failed
-		try { form.reset(); } catch (e) {}
+		try { 
+			form.reset();
+			submitBtn.textContent = 'Start My Project';
+		} catch (e) {}
 	  }
 	});
 
