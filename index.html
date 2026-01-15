@@ -2,457 +2,282 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <title>Techgram - Web Development</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <!--
-    TemplateMo 563 SEO Dream
-    https://templatemo.com/tm-563-seo-dream
-    -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Techgram - Affordable Websites for Businesses</title>
+	<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+	<script>
+	tailwind.config = {
+		theme: {
+			extend: {
+				colors: {
+					primary: '#000000',
+					secondary: '#ffffff'
+				},
+				borderRadius: {
+					'none': '0px',
+					'sm': '4px',
+					DEFAULT: '8px',
+					'md': '12px',
+					'lg': '16px',
+					'xl': '20px',
+					'2xl': '24px',
+					'3xl': '32px',
+					'full': '9999px',
+					'button': '8px'
+				}
+			}
+		}
+	}
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+	<style>
+	:where([class^="ri-"])::before {
+		content: "\f3c2";
+	}
+	
+	body {
+		font-family: 'Inter', sans-serif;
+	}
+	
+	.font-pacifico {
+		font-family: 'Pacifico', serif;
+	}
+	</style>
 </head>
 
-<body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                         <a class="logo"> 
-                            <h4>Techgram <img src="assets/images/logo-icon.png" alt=""></h4>
-                         </a> 
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#features">How It Works</a></li>
-                            <li class="scroll-to-section"><a href="#about">About Us</a></li>
-                            <li class="scroll-to-section"><a href="#services">Services</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-                            <li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-6 align-self-center">
-                            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                                <div class="row">
-                                    <div class="col-lg-4 col-sm-4">
-                                        <div class="info-stat">
-                                            <h6>Price:</h6>
-                                            <h4>Starts from $199</h4>
-                                        </div>
-                                    </div>
-									<div class="col-lg-4 col-sm-4">
-                                        <div class="info-stat">
-                                            <h6>Fast Loading:</h6>
-                                            <h4>Under 3 Seconds</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-4">
-                                            <h6>Delivery Time</h6>
-                                            <h4>1-3 Weeks</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <h2>Simple, Modern, Effective Websites</h2>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="main-green-button scroll-to-section">
-                                            <a href="#contact">Get Your Quote</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <img src="assets/images/banner-right-image.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="features" class="features section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="features-content">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                    <div class="first-number number">
-                                        <h6>01</h6>
-                                    </div>
-                                    <div class="icon"></div>
-                                    <h4>Reach Out</h4>
-                                    <div class="line-dec"></div>
-                                    <p>Contact us to discuss your web needs for your business.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="features-item second-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <div class="second-number number">
-                                        <h6>02</h6>
-                                    </div>
-                                    <div class="icon"></div>
-                                    <h4>Develop a Strategy</h4>
-                                    <div class="line-dec"></div>
-                                    <p>We plan a tailored web solution to create or update your online presence.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                                    <div class="third-number number">
-                                        <h6>03</h6>
-                                    </div>
-                                    <div class="icon"></div>
-                                    <h4>Implementation</h4>
-                                    <div class="line-dec"></div>
-                                    <p>Our team builds and launches your modern, functional website.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="features-item second-feature last-features-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                                    <div class="fourth-number number">
-                                        <h6>04</h6>
-                                    </div>
-                                    <div class="icon"></div>
-                                    <h4>Analyze the result</h4>
-                                    <div class="line-dec"></div>
-                                    <p>We monitor performance and provide ongoing maintenance for optimal results.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="about" class="about-us section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/about-left-image.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <div class="section-heading">
-                        <h6>About Us</h6>
-                        <h2>Top <em>web development</em> agency</span></h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="about-item">
-                                <h4>750+</h4>
-                                <h6>projects finished</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="about-item">
-                                <h4>340+</h4>
-                                <h6>happy clients</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="about-item">
-                                <h4>100%</h4>
-                                <h6>satisfied customers</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Techgram specializes in helping businesses establish or modernize their online presence. Whether you lack a website or have an outdated one, we provide custom solutions to boost your visibility and engagement.</p>
-                    <div class="main-green-button scroll-to-section"><a href="#contact">Contact Us</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="services" class="our-services section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h6>Our Services</h6>
-                        <h2>What We <span>Offer</span> To Our <em>Clients</em></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Website Creation</h4>
-                                    <p>We build modern, responsive websites for businesses without an online presence.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-02.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Website Maintenance</h4>
-                                    <p>Ongoing support to keep your site updated, secure, and running smoothly.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-03.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Website Modernization</h4>
-                                    <p>Revamp outdated websites with fresh designs and modern features.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-03.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Consulting</h4>
-                                    <p>Expert advice on web strategies tailored for small and local businesses.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.7s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>SEO Optimization</h4>
-                                    <p>Improve your site's visibility on search engines to attract more local customers.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="icon">
-                                    <img src="assets/images/service-icon-02.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="right-content">
-                                    <h4>Brand and Logo Design</h4>
-                                    <p>We create memorable brands and professional logos that perfectly capture your business identity.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact" class="contact-us section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                    <form id="contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-3">
-                                <div class="section-heading">
-                                    <h6>Contact Us</h6>
-                                    <h2><span>Get</span> In <em>Touch</em> With Us</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <!-- status message inserted here by JS -->
-                                <div id="contact-message" class="contact-message" role="status" aria-live="polite" aria-atomic="true" hidden></div>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="text" name="business" id="business" placeholder="Business Name" autocomplete="on">
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                                        </fieldset>
-                                    </div>
-									 <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="tel" name="phone" id="phone" pattern="^\+?[0-9]{10,15}$" placeholder="Your Phone">
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                                        </fieldset>
-                                    </div>
-									<div class="col-lg-6">
-										<fieldset>
-											<select name="service" id="service" required>
-												<option value="" disabled selected>Service Required</option>
-												<option value="new-website">New website</option>
-												<option value="redesign">Needs a redesign</option>
-												<option value="maintenance">Maintenance or updates</option>
-												<option value="seo">SEO Optimization</option>
-												<option value="ecommerce">Start selling online (e-commerce)</option>
-												<option value="consultation">Consultation</option>
-												<option value="logo">Logo Design</option>
-												<option value="other">Something else</option>
-											</select>
-										</fieldset>
-									</div>
-                                    <div class="col-lg-12">
-                                        <fieldset>
-                                            <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <fieldset>
-                                            <button type="submit" id="form-submit" class="main-button">Send Message Now</button>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="contact-info">
-                                    <ul>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="assets/images/contact-icon-01.png" alt="email icon">
-                                            </div>
-                                            <a href="mailto:hello@techgram.ca" target="_blank">hello@techgram.ca</a>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="assets/images/contact-icon-02.png" alt="phone">
-                                            </div>
-                                            <a href="tel:+15197745966" target="_blank">+1(289)-500-0307</a>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="assets/images/contact-icon-03.png" alt="location">
-                                            </div>
-                                            <a>Ontario, Canada</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright © 2026 Techgram Co., Ltd. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/imagesloaded.js"></script>
-    <script src="assets/js/custom.js"></script>
-
+<body class="bg-white text-black">
+	<header class="w-full border-b border-gray-200 bg-white">
+		<div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+			<div class="font-['Open_Sans',sans-serif] text-[30px] font-extrabold text-black"> Techgram </div>
+			<nav class="hidden md:flex items-center space-x-8"> <a href="#services" class="text-black hover:text-gray-600 transition-colors font-medium">Services</a> <a href="#who-we-serve" class="text-black hover:text-gray-600 transition-colors font-medium">Who We Serve</a> <a href="#why-us" class="text-black hover:text-gray-600 transition-colors font-medium">Why Us</a> <a href="#contact" class="text-black hover:text-gray-600 transition-colors font-medium">Contact</a> </nav>
+			<button class="md:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-button"> <i class="ri-menu-line ri-xl text-black"></i> </button>
+		</div>
+		<div class="mobile-menu hidden bg-white border-t border-gray-200 md:hidden" id="mobile-menu">
+			<nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col space-y-4"> <a href="#services" class="text-black hover:text-gray-600 transition-colors font-medium">Services</a> <a href="#who-we-serve" class="text-black hover:text-gray-600 transition-colors font-medium">Who We Serve</a> <a href="#why-us" class="text-black hover:text-gray-600 transition-colors font-medium">Why Us</a> <a href="#contact" class="text-black hover:text-gray-600 transition-colors font-medium">Contact</a> </nav>
+		</div>
+	</header>
+	<main>
+		<section class="w-full min-h-screen flex items-center bg-white">
+			<div class="max-w-7xl mx-auto px-6 py-12 w-full">
+				<div class="max-w-4xl">
+					<h1 class="text-6xl font-bold leading-tight mb-8 text-black">
+					Affordable Websites for Businesses That Need Results
+					</h1>
+					<p class="text-2xl text-gray-700 mb-12 leading-relaxed"> Websites, stores, and booking systems — built first, pay after approval. </p>
+					<div class="flex flex-col sm:flex-row gap-6">
+						<button class="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors !rounded-button whitespace-nowrap"><a href="#contact">Get Started</a></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="w-full py-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-6 lg:max-w-6xl">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold mb-4 text-black">Our Services</h2>
+					<p class="text-xl text-gray-700">Professional solutions for your business needs</p>
+				</div>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-white border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="w-12 h-12 flex items-center justify-center mb-6"> <i class="ri-computer-line ri-2x text-black"></i> </div>
+						<h3 class="text-2xl font-bold mb-4 text-black">Websites</h3>
+						<p class="text-gray-700 mb-6 leading-relaxed"> Business websites for service providers and startups, with service or product listings, contact forms, email integration, and mobile-first design. </p>
+						<p class="text-sm text-gray-600 font-medium"> Starts at $199. No recurring or monthly costs. </p>
+					</div>
+					<div class="bg-white border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="w-12 h-12 flex items-center justify-center mb-6"> <i class="ri-shopping-bag-3-line ri-2x text-black"></i> </div>
+						<h3 class="text-2xl font-bold mb-4 text-black">Shopify Stores</h3>
+						<p class="text-gray-700 mb-6 leading-relaxed"> Shopify store setup with product configuration, payment integration, and a clean checkout experience. </p>
+						<p class="text-sm text-gray-600 font-medium"> Starts at $499. Shopify subscription fees apply. </p>
+					</div>
+					<div class="bg-white border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="w-12 h-12 flex items-center justify-center mb-6"> <i class="ri-calendar-check-line ri-2x text-black"></i> </div>
+						<h3 class="text-2xl font-bold mb-4 text-black">Booking & Automation</h3>
+						<p class="text-gray-700 mb-6 leading-relaxed"> Online booking systems with payment integration, automated emails, reminders, and newsletter setup for appointment-based businesses. </p>
+						<p class="text-sm text-gray-600 font-medium"> Custom pricing based on requirements. </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="who-we-serve" class="w-full py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-6 lg:max-w-6xl">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold mb-4 text-black">Who We Serve</h2>
+					<p class="text-xl text-gray-700">Tailored solutions for different business types</p>
+				</div>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/services.jpg')"></div>
+						<div class="p-6 text-center">
+							<h3 class="text-xl font-bold mb-3 text-black">Service Businesses</h3>
+							<p class="text-gray-700">Salons, barbers, contractors, and other local service providers</p>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/startups.jpg')"></div>
+						<div class="p-6 text-center">
+							<h3 class="text-xl font-bold mb-3 text-black">Startups</h3>
+							<p class="text-gray-700">Product founders and early-stage companies</p>
+						</div>
+					</div>
+					<div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-black">
+						<div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/lead-gen.jpg')"></div>
+						<div class="p-6 text-center">
+							<h3 class="text-xl font-bold mb-3 text-black">E-commerce & Lead Generation</h3>
+							<p class="text-gray-700">Online stores and lead-focused businesses</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="w-full py-20 bg-gray-50">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<h2 class="text-4xl font-bold mb-16 text-black">How It Works</h2>
+				<div class="grid md:grid-cols-4 gap-8">
+					<div class="flex flex-col items-center">
+						<div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
+						<p class="text-lg font-medium text-black">You tell us what you need</p>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
+						<p class="text-lg font-medium text-black">We build the website</p>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
+						<p class="text-lg font-medium text-black">You review it</p>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
+						<p class="text-lg font-medium text-black">You pay only if you approve</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="why-us" class="w-full py-20 bg-gray-50">
+			<div class="max-w-6xl mx-auto px-6">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold mb-4 text-black">Why Choose Techgram</h2>
+					<p class="text-xl text-gray-700">What sets us apart from other web agencies</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<div class="bg-white border border-gray-200 p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300 hover:border-black cursor-pointer">
+						<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gray-50 rounded-full"> <i class="ri-money-dollar-circle-line ri-2x text-black"></i> </div>
+						<h3 class="text-xl font-bold mb-3 text-black">Affordable Pricing</h3>
+						<p class="text-gray-700">Fair rates without hidden costs</p>
+					</div>
+					<div class="bg-white border border-gray-200 p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300 hover:border-black cursor-pointer">
+						<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gray-50 rounded-full"> <i class="ri-eye-line ri-2x text-black"></i> </div>
+						<h3 class="text-xl font-bold mb-3 text-black">Built Before You Pay</h3>
+						<p class="text-gray-700">See your website before committing</p>
+					</div>
+					<div class="bg-white border border-gray-200 p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300 hover:border-black cursor-pointer">
+						<div class="w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gray-50 rounded-full"> <i class="ri-rocket-line ri-2x text-black"></i> </div>
+						<h3 class="text-xl font-bold mb-3 text-black">Fast Turnaround</h3>
+						<p class="text-gray-700">Quick delivery without compromising quality</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="w-full py-20 bg-gray-50">
+			<div class="max-w-6xl mx-auto px-6">
+				<div class="grid md:grid-cols-[65%_35%] gap-12 items-start">
+					<!-- Contact Form -->
+					<div>
+						<div class="mb-12">
+							<h2 class="text-4xl font-bold mb-4 text-black">See Your Website Before You Pay</h2>
+							<p class="text-xl text-gray-700">Tell us about your project and we'll get started</p>
+						</div>
+						<form class="space-y-6" id="contact-form">
+							<input type="text" name="name" id="name" placeholder="Your Name" class="w-full px-4 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black" required>
+							<input type="email" name="email" id="email" placeholder="Your Email" class="w-full px-4 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black" required>
+							<input type="text" name="business_type" id="business" placeholder="Business Type" class="w-full px-4 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black">
+							<textarea name="project_needs" id="message" placeholder="Project Needs" rows="4" maxlength="500" class="w-full px-4 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black resize-none"></textarea>
+							<button type="submit" class="w-full bg-black text-white py-4 text-lg font-semibold hover:bg-gray-800 transition-colors !rounded-button"> Start My Project </button>
+							<div id="form-message" class="hidden mt-6 text-center text-lg font-medium"></div>
+						</form>
+					</div>
+					<!-- Contact Info -->
+					<div class="bg-black text-white p-10 rounded-lg h-full flex flex-col justify-center">
+						<h3 class="text-2xl font-bold mb-6">Contact</h3>
+						<p class="mb-4 text-gray-300">Have a question or want to talk first?</p>
+						<div class="space-y-4 text-lg">
+							<p>Email: <span class="font-medium"><a href="mailto:hello@techgram.ca" target="_blank">hello@techgram.ca</a></span></p>
+							<p>Phone: <span class="font-medium"><a href="tel:+12895000307" target="_blank">+1 (289) 500-0307</a></span></p>
+							<p>Whatsapp: <span class="font-medium"><a href="https://wa.me/12895000307?text=Hi%20Techgram,%20I%20would%20like%20to%20discuss%20a%20website%20project." target="_blank">+1 (289) 500-0307</a></span></p>
+							<p>Location: <span class="font-medium">Toronto, Canada</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="w-full py-12 bg-white border-t border-gray-200">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="flex flex-col md:flex-row justify-between items-center">
+				<div class="font-['Open_Sans',sans-serif] text-[24px] font-extrabold text-black mb-4 md:mb-0"> Techgram </div>
+				<div class="flex items-center space-x-6">
+				  <a href="https://www.instagram.com/techgram.ca" target="_blank" class="text-gray-600 hover:text-black transition-colors">
+					<i class="ri-instagram-line ri-xl"></i>
+				  </a>
+				  <a href="https://www.facebook.com/techgram.ca" target="_blank" class="text-gray-600 hover:text-black transition-colors">
+					<i class="ri-facebook-circle-line ri-xl"></i>
+				  </a>
+				  <a href="#" class="text-gray-600 hover:text-black transition-colors">
+					<i class="ri-google-line ri-xl"></i>
+				  </a>
+				</div>
+			</div>
+			<div class="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
+				<p>&copy; 2026 Techgram. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+	<script id="navigation-interactions">
+	document.addEventListener('DOMContentLoaded', function() {
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
+		const menuIcon = mobileMenuButton.querySelector('i');
+		mobileMenuButton.addEventListener('click', function() {
+			mobileMenu.classList.toggle('hidden');
+			if(mobileMenu.classList.contains('hidden')) {
+				menuIcon.className = 'ri-menu-line ri-xl text-black';
+			} else {
+				menuIcon.className = 'ri-close-line ri-xl text-black';
+			}
+		});
+		const navLinks = document.querySelectorAll('nav a');
+		navLinks.forEach(link => {
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+				if(window.innerWidth < 768) {
+					mobileMenu.classList.add('hidden');
+					menuIcon.className = 'ri-menu-line ri-xl text-black';
+				}
+				navLinks.forEach(l => l.classList.remove('text-black'));
+				navLinks.forEach(l => l.classList.add('text-gray-600'));
+				this.classList.remove('text-gray-600');
+				this.classList.add('text-black');
+			});
+		});
+	});
+	</script>
+	<script id="button-interactions">
+	document.addEventListener('DOMContentLoaded', function() {
+		const buttons = document.querySelectorAll('button');
+		buttons.forEach(button => {
+			button.addEventListener('mouseenter', function() {
+				this.style.transform = 'translateY(-1px)';
+			});
+			button.addEventListener('mouseleave', function() {
+				this.style.transform = 'translateY(0)';
+			});
+		});
+	});
+	</script>
 </body>
 
 </html>
