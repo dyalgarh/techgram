@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: `Techgram <${process.env.NOTIFY_EMAIL}>`,
       to: process.env.NOTIFY_EMAIL,
-      subject: `New Lead: ${name} (${service_required || "Service"})`,
+      subject: `New Lead: ${email}`,
       text: `
             Name: ${name}
             Business: ${business_name || "N/A"}
