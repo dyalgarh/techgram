@@ -51,20 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Mobile menu
-const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
+	document.addEventListener('DOMContentLoaded', function() {
+		const menuBtn = document.getElementById("menu-btn");
+		  const mobileMenu = document.getElementById("mobile-menu");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-  
-  //hide mobile menu on click
-  document.querySelectorAll("#mobile-menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-  });
-});
-
+		  menuBtn.addEventListener("click", () => {
+			mobileMenu.classList.toggle("hidden");
+		  });
+		  
+		  //hide mobile menu on click
+		  document.querySelectorAll("#mobile-menu a").forEach(link => {
+		  link.addEventListener("click", () => {
+			mobileMenu.classList.add("hidden");
+		  });
+		});
+	});
+	
 // Transparent nav — becomes solid on scroll
         (function () {
             var nav = document.getElementById('main-nav');
@@ -79,17 +81,19 @@ const menuBtn = document.getElementById("menu-btn");
             onScroll();
         })();
 
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-                anchor.addEventListener('click', function (e) {
-                    var id = this.getAttribute('href');
-                    if (id === '#') return;
-                    var target = document.querySelector(id);
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        history.replaceState(null, '', window.location.pathname);
-                    }
-                });
-            });
+        document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
         });
+      });
