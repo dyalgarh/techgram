@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   try {
     // Try a lightweight query
     const { data, error } = await supabase
-      .from("pharmacy_signups")    // small table
+      .from("leads")    // small table
       .select("id")
       .limit(1);
 
