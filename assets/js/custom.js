@@ -49,3 +49,47 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 1000);
 	}
 });
+
+//Mobile menu
+const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+  
+  //hide mobile menu on click
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
+
+// Transparent nav — becomes solid on scroll
+        (function () {
+            var nav = document.getElementById('main-nav');
+            function onScroll() {
+                if (window.scrollY > 40) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+                anchor.addEventListener('click', function (e) {
+                    var id = this.getAttribute('href');
+                    if (id === '#') return;
+                    var target = document.querySelector(id);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        history.replaceState(null, '', window.location.pathname);
+                    }
+                });
+            });
+        });
